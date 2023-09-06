@@ -21,7 +21,7 @@ const getAllBio = async (req, res) => {
       const newBio = await req.db.collection('bio').insertOne({ name, address, phone, major })
       
       res.status(200).json({
-        message: 'Bio successfully created',
+        message: 'Biodata successfully created',
         data: newBio
       })
     } catch (error) {
