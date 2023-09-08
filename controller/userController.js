@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const { JWT_SIGN } = require('../config/jwt.js')
 const StandardError = require('../utils/standard-error.js')
 
-const registerService = async (req, username, password, role) => {
+const registerService = async (req, username, email, password, role) => {
   const user = await req.db.collection('users').findOne({ username })
     
   if (user) {
